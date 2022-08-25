@@ -16,6 +16,7 @@ export const MobileDrawerAccordion: React.FC<MobileDrawerAccordionProps> = ({
   moreOptions,
 }) => {
   const [open, setOpen] = useState(false)
+
   return (
     <>
       {hasMoreOptions === true && (
@@ -34,7 +35,7 @@ export const MobileDrawerAccordion: React.FC<MobileDrawerAccordionProps> = ({
           {moreOptions?.map((Option) => (
             <Link href={`/${Option.href}`} key={Option.title}>
               <a
-                className="border w-full border-gray-200 rounded-md px-2 shadow-md h-16 flex items-center justify-between"
+                className="border mb-2 w-full border-gray-200 rounded-md px-2 shadow-md h-16 flex items-center justify-between"
                 onClick={() => setOpen(!open)}
                 key={Option.title}
               >

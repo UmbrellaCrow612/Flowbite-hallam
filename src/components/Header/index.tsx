@@ -1,14 +1,18 @@
 import { Logo } from './Logo'
 import { MobileMenuHandler } from './Mobile/MobileMenuHandler'
+import { SearchMenuHandler } from './Search/SearchMenuHandler'
 
 interface indexProps {}
 
 export const Header: React.FC<indexProps> = () => {
   return (
     <header>
-      <nav className="w-full max-w-screen-2xl mx-auto px-5 sticky top-0 h-20 flex items-center justify-between border-b shadow-md border-b-slate-300">
+      <nav className="sticky top-0 flex items-center justify-between w-full h-20 px-5 mx-auto border-b shadow-md max-w-screen-2xl border-b-slate-300">
         <Logo />
-        <MobileMenuHandler />
+        <div className="flex items-center gap-3">
+          <SearchMenuHandler />
+          <MobileMenuHandler />
+        </div>
       </nav>
     </header>
   )
