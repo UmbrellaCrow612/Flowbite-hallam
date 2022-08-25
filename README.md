@@ -1,16 +1,3 @@
-# Templates 
+# Use flowbite for most of the components
 
-## Branches:
-
-Includes 
-
-- Tailwind stater 
-- MUI starter 
-- Prisma 
-- Next Auth
-- Next auth & Prisma Adaptor
-- All feats branch for production: Tailwind, Prisma, Next Auth.
-
-Things you could add:
-
-Next themes to Tailwind examples
+- [Logo made here](https://app.logo.com/dashboard/logo_4b868812-1eff-44f7-8a60-fbd933a88992?new_logo=true)
