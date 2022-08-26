@@ -8,7 +8,7 @@ export const SearchMenuHandler: React.FC<SearchMenuHandlerProps> = () => {
   const [open, setOpen] = useRecoilState(searchModalState)
   return (
     <button
-      aria-label="Open Menu"
+      aria-label="Open Search"
       className="flex items-center justify-center p-2 border border-gray-200 rounded-md shadow-md"
       onClick={() => setOpen(!open)}
     >
