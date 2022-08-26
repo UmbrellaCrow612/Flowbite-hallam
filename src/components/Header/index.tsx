@@ -3,6 +3,7 @@ import { HeaderButton } from './HeaderButton'
 import { Logo } from './Logo'
 import { MobileMenuHandler } from './Mobile/MobileMenuHandler'
 import { SearchMenuHandler } from './Search/SearchMenuHandler'
+import { SubHeader } from './SubHeader'
 import { NavOptions } from './Values/NavOptions'
 
 interface indexProps {}
@@ -10,7 +11,7 @@ interface indexProps {}
 export const Header: React.FC<indexProps> = () => {
   return (
     <header>
-      <nav className="sticky top-0 flex items-center justify-between w-full h-20 px-5 mx-auto border-b shadow-md max-w-screen-2xl border-b-slate-300">
+      <nav className="sticky top-0 flex items-center justify-between w-full h-20 px-5 mx-auto max-w-screen-2xl ">
         <Logo />
         {/** Desktop options */}
         <div className="items-center hidden gap-2 p-1 md:flex">
@@ -28,6 +29,7 @@ export const Header: React.FC<indexProps> = () => {
           <MobileMenuHandler />
         </div>
       </nav>
+      <SubHeader />
     </header>
   )
 }
