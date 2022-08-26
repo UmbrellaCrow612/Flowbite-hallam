@@ -1,7 +1,7 @@
 import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
 import { MobileDrawer } from '../components/Header/Mobile/MobileDrawer'
-import { SearchModal } from '../components/Header/SearchModal'
+import { SearchModal } from '../components/Header/Search/SearchModal'
 
 interface GlobalLayoutProps {
   children: React.ReactNode
