@@ -21,21 +21,21 @@ export const MobileDrawerAccordion: React.FC<MobileDrawerAccordionProps> = ({
     <>
       {hasMoreOptions === true && (
         <button
-          className="border border-gray-200 rounded-md px-2 shadow-md h-16 flex items-center justify-between"
+          className="flex items-center justify-between h-16 px-2 border-2 border-black rounded-md shadow-lg"
           onClick={() => setOpen(!open)}
         >
-          <h2 className="font-bold tracking-wide text-xl">{title}</h2>
+          <h2 className="text-base font-bold tracking-wide">{title}</h2>
           <MdExpandMore
             className={`text-3xl transition-all ${open ? 'rotate-180' : ''}`}
           />
         </button>
       )}
       {open && (
-        <div className="mt-1 px-3">
+        <div className="px-3 mt-1">
           {moreOptions?.map((Option) => (
             <Link href={`/${Option.href}`} key={Option.title}>
               <a
-                className="border mb-2 w-full border-gray-200 rounded-md px-2 shadow-md h-16 flex items-center justify-between"
+                className="flex items-center justify-between h-16 px-2 mt-3 border-2 border-black rounded-md shadow-lg"
                 onClick={() => setOpen(!open)}
                 key={Option.title}
               >
