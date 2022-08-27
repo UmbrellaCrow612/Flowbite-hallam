@@ -14,6 +14,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Container>
+        {/** ======= Hero 1 ========== */}
         <section className="w-full xl:h-[600px] h-[800px]  grid grid-cols-1 grid-rows-2 xl:grid-cols-2 xl:grid-rows-1">
           {/** grid one */}
           <div className="flex flex-col items-center justify-center gap-4 font-mono xl:gap-7">
@@ -33,6 +34,14 @@ const Home: NextPage = () => {
           <div>
             <BackgroundImage imgSrc={heroBgImageOne} alt="" />
           </div>
+        </section>
+
+        {/** ======= course search ========== */}
+        <section className="h-[300px] flex flex-col gap-7 px-3 items-center justify-center">
+          <h2 className='text-3xl font-extrabold tracking-wide'>
+            Course Search
+          </h2>
+          <input type="text" placeholder='Search for a course' className='w-full max-w-lg px-5 py-5 border border-gray-100 rounded-full shadow-md placeholder:text-sm' />
         </section>
       </Container>
     </>
