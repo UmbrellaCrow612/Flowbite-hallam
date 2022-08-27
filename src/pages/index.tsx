@@ -6,6 +6,7 @@ import { Container } from '../components/Home/Container'
 
 import heroBgImageOne from '../../public/images/hero-1-bg.png'
 import heroBgImageTwo from '../../public/images/hero-2-bg.png'
+import { Card } from '../components/Home/Card'
 const Home: NextPage = () => {
   return (
     <>
@@ -79,6 +80,28 @@ const Home: NextPage = () => {
               </a>
             </Link>
           </div>
+        </section>
+
+        {/* ========= Cards 1 =========== */}
+        <section className="flex flex-col items-center justify-between gap-6 px-5 xl:flex-row xl:gap-0">
+          <Card
+            body="Our city is scenic, creative and super friendly. You're going to love it"
+            imgSrc="https://picsum.photos/200/300"
+            href=""
+            title="Explore Sheffield"
+          />
+          <Card
+            body="Award-winning teaching, world-class facilities and dedicated support"
+            imgSrc="https://picsum.photos/200/300"
+            href=""
+            title="Why choose us?"
+          />
+          <Card
+            body="We'll find you a place to live in your first year guaranteed!"
+            imgSrc="https://picsum.photos/200/300"
+            href=""
+            title="Accommodation"
+          />
         </section>
       </Container>
     </>
