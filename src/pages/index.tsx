@@ -22,9 +22,9 @@ const Home: NextPage = () => {
             <h2 className="text-4xl font-extrabold tracking-wide xl:text-5xl">
               Clearing {new Date().getFullYear()}
             </h2>
-            <h4 className="text-2xl font-bold tracking-wide xl:text-3xl">
+            <h3 className="text-xl font-bold tracking-wide xl:text-2xl">
               Find your place
-            </h4>
+            </h3>
             <Link href="">
               <a className="button-86" role="button">
                 Find your place
@@ -65,10 +65,10 @@ const Home: NextPage = () => {
           {/* Grid 2 */}
           <div className="flex flex-col items-center justify-center gap-4">
             <h2 className="text-3xl font-extrabold tracking-wide">Open days</h2>
-            <h4 className="font-bold text-center">
+            <h3 className="font-bold text-center">
               Join us on campus this autumn to check out our campus, facilities
               and support.
-            </h4>
+            </h3>
             <Link href="">
               <a className="relative px-6 py-2 group">
                 <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
