@@ -5,6 +5,7 @@ import { BackgroundImage } from '../components/Home/BackgroundImage'
 import { Container } from '../components/Home/Container'
 
 import heroBgImageOne from '../../public/images/hero-1-bg.png'
+import heroBgImageTwo from '../../public/images/hero-2-bg.png'
 const Home: NextPage = () => {
   return (
     <>
@@ -15,13 +16,13 @@ const Home: NextPage = () => {
       </Head>
       <Container>
         {/** ======= Hero 1 ========== */}
-        <section className="w-full xl:h-[600px] h-[800px]  grid grid-cols-1 grid-rows-2 xl:grid-cols-2 xl:grid-rows-1">
+        <section className="w-full xl:h-[600px] h-[800px]  grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1">
           {/** grid one */}
           <div className="flex flex-col items-center justify-center gap-4 font-mono xl:gap-7">
             <h2 className="text-4xl font-extrabold tracking-wide xl:text-5xl">
               Clearing {new Date().getFullYear()}
             </h2>
-            <h4 className="text-xl font-bold tracking-wide xl:text-2xl">
+            <h4 className="text-2xl font-bold tracking-wide xl:text-3xl">
               Find your place
             </h4>
             <Link href="">
@@ -32,16 +33,52 @@ const Home: NextPage = () => {
           </div>
           {/** grid two */}
           <div>
-            <BackgroundImage imgSrc={heroBgImageOne} alt="" />
+            <BackgroundImage
+              imgSrc={heroBgImageOne}
+              alt="Women on a computer reading paper"
+            />
           </div>
         </section>
 
         {/** ======= course search ========== */}
         <section className="h-[300px] flex flex-col gap-7 px-3 items-center justify-center">
-          <h2 className='text-3xl font-extrabold tracking-wide'>
+          <h2 className="text-3xl font-extrabold tracking-wide">
             Course Search
           </h2>
-          <input type="text" placeholder='Search for a course' className='w-full max-w-lg px-5 py-5 border border-gray-100 rounded-full shadow-md placeholder:text-sm' />
+          <input
+            type="text"
+            placeholder="Search for a course"
+            className="w-full max-w-lg px-5 py-5 border border-gray-100 rounded-full shadow-md placeholder:text-sm"
+          />
+        </section>
+
+        {/** ======= Hero 2 ========== */}
+
+        <section className="h-[600px] grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1 ">
+          {/* Grid 1 */}
+          <div>
+            <BackgroundImage
+              imgSrc={heroBgImageTwo}
+              alt="Three people outside in a park"
+            />
+          </div>
+          {/* Grid 2 */}
+          <div className="flex flex-col items-center justify-center gap-4">
+            <h2 className="text-3xl font-extrabold tracking-wide">Open days</h2>
+            <h4 className="font-bold text-center">
+              Join us on campus this autumn to check out our campus, facilities
+              and support.
+            </h4>
+            <Link href="">
+              <a className="relative px-6 py-2 group">
+                <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+                <span className="absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
+                <span className="relative text-black group-hover:text-white">
+                  Book for autumn
+                </span>
+              </a>
+            </Link>
+          </div>
         </section>
       </Container>
     </>
