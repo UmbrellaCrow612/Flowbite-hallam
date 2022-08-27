@@ -1,8 +1,10 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import heroOneBg from '../../public/images/hero-1-bg.jpeg'
+import Link from 'next/link'
+import { BackgroundImage } from '../components/Home/BackgroundImage'
 import { Container } from '../components/Home/Container'
+
+import heroBgImageOne from '../../public/images/hero-1-bg.png'
 const Home: NextPage = () => {
   return (
     <>
@@ -12,8 +14,25 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Container>
-        <section>
-          Hello world
+        <section className="w-full xl:h-[600px] h-[800px]  grid grid-cols-1 grid-rows-2 xl:grid-cols-2 xl:grid-rows-1">
+          {/** grid one */}
+          <div className="flex flex-col items-center justify-center gap-4 font-mono xl:gap-7">
+            <h2 className="text-4xl font-extrabold tracking-wide xl:text-5xl">
+              Clearing {new Date().getFullYear()}
+            </h2>
+            <h4 className="text-xl font-bold tracking-wide xl:text-2xl">
+              Find your place
+            </h4>
+            <Link href="">
+              <a className="button-86" role="button">
+                Find your place
+              </a>
+            </Link>
+          </div>
+          {/** grid two */}
+          <div>
+            <BackgroundImage imgSrc={heroBgImageOne} alt="" />
+          </div>
         </section>
       </Container>
     </>

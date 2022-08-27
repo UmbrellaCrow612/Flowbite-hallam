@@ -30,21 +30,21 @@ export const MobileDrawerAccordion: React.FC<MobileDrawerAccordionProps> = ({
           />
         </button>
       )}
-      {open && (
-        <div className="px-3 mt-1">
-          {moreOptions?.map((Option) => (
-            <Link href={`/${Option.href}`} key={Option.title}>
-              <a
-                className="flex items-center justify-between h-16 px-2 mt-3 border-2 border-black rounded-md shadow-lg"
-                onClick={() => setOpen(!open)}
-                key={Option.title}
-              >
-                {Option.title}
-              </a>
-            </Link>
-          ))}
-        </div>
-      )}
+
+      {/** More options scroll down */}
+      <div className={`px-3 transition-all mt-1 ${open ? 'block' : 'hidden'} `}>
+        {moreOptions?.map((Option) => (
+          <Link href={`/${Option.href}`} key={Option.title}>
+            <a
+              className="flex items-center justify-between h-16 px-2 mt-3 border-2 border-black rounded-md shadow-lg"
+              onClick={() => setOpen(!open)}
+              key={Option.title}
+            >
+              {Option.title}
+            </a>
+          </Link>
+        ))}
+      </div>
     </>
   )
 }
