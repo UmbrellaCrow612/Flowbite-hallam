@@ -85,28 +85,33 @@ const Home: NextPage = () => {
         </section>
 
         {/* ========= Cards 1 =========== */}
-        <section className="flex flex-col items-center justify-between gap-6 px-5 mt-4 xl:flex-row xl:gap-0">
-          <Card
-            body="Our city is scenic, creative and super friendly. You're going to love it"
-            imgSrc="/images/applicant-1-bg.jpeg"
-            alt=""
-            href=""
-            title="Explore Sheffield"
-          />
-          <Card
-            body="Award-winning teaching, world-class facilities and dedicated support"
-            imgSrc="/images/applicant-2-bg.jpeg"
-            href=""
-            title="Why choose us?"
-            alt=""
-          />
-          <Card
-            body="We'll find you a place to live in your first year guaranteed!"
-            imgSrc="/images/applicant-3-bg.jpeg"
-            href=""
-            title="Accommodation"
-            alt=""
-          />
+        <section>
+          <h2 className="text-2xl font-extrabold tracking-wide text-center md:text-3xl">
+            For applicants
+          </h2>
+          <div className="flex flex-col items-center justify-between gap-6 px-5 mt-4 xl:flex-row xl:gap-0">
+            <Card
+              body="Our city is scenic, creative and super friendly. You're going to love it"
+              imgSrc="/images/applicant-1-bg.jpeg"
+              alt=""
+              href=""
+              title="Explore Sheffield"
+            />
+            <Card
+              body="Award-winning teaching, world-class facilities and dedicated support"
+              imgSrc="/images/applicant-2-bg.jpeg"
+              href=""
+              title="Why choose us?"
+              alt=""
+            />
+            <Card
+              body="We'll find you a place to live in your first year guaranteed!"
+              imgSrc="/images/applicant-3-bg.jpeg"
+              href=""
+              title="Accommodation"
+              alt=""
+            />
+          </div>
         </section>
 
         {/* ========= Hero 3 =========== */}
@@ -114,10 +119,10 @@ const Home: NextPage = () => {
         <section className="grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1 h-[600px] mt-4">
           {/* Grid one */}
           <div className="flex flex-col items-center justify-center gap-6 text-center">
-            <h2 className="text-3xl font-extrabold tracking-wide md:text-4xl">
+            <h2 className="text-2xl font-extrabold tracking-wide md:text-3xl">
               Research at Hallam
             </h2>
-            <h3 className="max-w-md text-2xl md:text-3xl md:max-w-none">
+            <h3 className="max-w-md text-xl md:text-2xl md:max-w-none">
               We bring knowledge to life with innovative, real-world research.
             </h3>
             <Link href="/">
@@ -136,28 +141,33 @@ const Home: NextPage = () => {
         </section>
 
         {/* ========= Cards 2 =========== */}
-        <section className="flex flex-col items-center justify-between gap-6 px-5 mt-4 xl:flex-row xl:gap-0">
-          <Card
-            body="Our city is scenic, creative and super friendly. You're going to love it"
-            imgSrc="https://picsum.photos/200/300"
-            href=""
-            title="Explore Sheffield"
-            alt=""
-          />
-          <Card
-            body="Award-winning teaching, world-class facilities and dedicated support"
-            imgSrc="https://picsum.photos/200/300"
-            href=""
-            title="Why choose us?"
-            alt=""
-          />
-          <Card
-            body="We'll find you a place to live in your first year guaranteed!"
-            imgSrc="https://picsum.photos/200/300"
-            href=""
-            title="Accommodation"
-            alt=""
-          />
+        <section>
+          <h2 className="text-2xl font-extrabold tracking-wide text-center md:text-3xl">
+            News
+          </h2>
+          <div className="flex flex-col items-center justify-between gap-6 px-5 mt-4 xl:flex-row xl:gap-0">
+            <Card
+              body="Our city is scenic, creative and super friendly. You're going to love it"
+              imgSrc="/images/applicant-1-bg.jpeg"
+              alt=""
+              href=""
+              title="Explore Sheffield"
+            />
+            <Card
+              body="Award-winning teaching, world-class facilities and dedicated support"
+              imgSrc="/images/applicant-2-bg.jpeg"
+              href=""
+              title="Why choose us?"
+              alt=""
+            />
+            <Card
+              body="We'll find you a place to live in your first year guaranteed!"
+              imgSrc="/images/applicant-3-bg.jpeg"
+              href=""
+              title="Accommodation"
+              alt=""
+            />
+          </div>
         </section>
 
         {/* ========= Hero 4 About =========== */}
