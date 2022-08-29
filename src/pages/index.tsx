@@ -35,7 +35,7 @@ const Home: NextPage = () => {
             </Link>
           </div>
           {/** grid two */}
-          <div>
+          <div className="p-5">
             <BackgroundImage
               imgSrc={heroBgImageOne}
               alt="Women on a computer reading paper"
@@ -59,7 +59,7 @@ const Home: NextPage = () => {
 
         <section className="h-[600px] mt-4  grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1 ">
           {/* Grid 1 */}
-          <div>
+          <div className="p-5">
             <BackgroundImage
               imgSrc={heroBgImageTwo}
               alt="Three people outside in a park"
@@ -124,7 +124,7 @@ const Home: NextPage = () => {
             </Link>
           </div>
           {/* Grid Two */}
-          <div className="relative">
+          <div className="p-5">
             <BackgroundImage
               imgSrc={heroBgImageThree}
               alt="Research Scientist experimenting"
@@ -132,10 +132,37 @@ const Home: NextPage = () => {
           </div>
         </section>
 
+        {/* ========= Cards 2 =========== */}
+        <section className="flex flex-col items-center justify-between gap-6 px-5 mt-4 xl:flex-row xl:gap-0">
+          <Card
+            body="Our city is scenic, creative and super friendly. You're going to love it"
+            imgSrc="https://picsum.photos/200/300"
+            href=""
+            title="Explore Sheffield"
+          />
+          <Card
+            body="Award-winning teaching, world-class facilities and dedicated support"
+            imgSrc="https://picsum.photos/200/300"
+            href=""
+            title="Why choose us?"
+          />
+          <Card
+            body="We'll find you a place to live in your first year guaranteed!"
+            imgSrc="https://picsum.photos/200/300"
+            href=""
+            title="Accommodation"
+          />
+        </section>
+
         {/* ========= Hero 4 About =========== */}
 
         <section className="mt-3 h-[600px] grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1">
           {/* grid 1 */}
+          <div className="p-5">
+            <BackgroundImage imgSrc={heroBgImageFour} alt="About page" />
+          </div>
+
+          {/* grid 2 */}
           <div className="flex flex-col items-center justify-center gap-6">
             <h2 className="text-3xl font-extrabold tracking-wide text-center md:text-4xl">
               Read more about Sheffield Hallam on out About page
@@ -143,10 +170,6 @@ const Home: NextPage = () => {
             <Link href="">
               <a className="button-86">About us</a>
             </Link>
-          </div>
-          {/* grid 2 */}
-          <div>
-            <BackgroundImage imgSrc={heroBgImageFour} alt="About page" />
           </div>
         </section>
       </Container>
