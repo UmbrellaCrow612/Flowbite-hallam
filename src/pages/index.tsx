@@ -5,7 +5,7 @@ import { BackgroundImage } from '../components/Home/BackgroundImage'
 import { Container } from '../components/Home/Container'
 
 import heroBgImageOne from '../../public/images/hero-1-bg.svg'
-import heroBgImageTwo from '../../public/images/hero-2-bg.svg'
+import heroBgImageTwo from '../../public/images/hero-2-bg.gif'
 import heroBgImageThree from '../../public/images/hero-3-bg.svg'
 import heroBgImageFour from '../../public/images/hero-4-bg.svg'
 import { Card } from '../components/Home/Card'
