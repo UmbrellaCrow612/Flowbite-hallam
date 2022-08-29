@@ -136,10 +136,6 @@ const Home: NextPage = () => {
 
         <section className="mt-3 h-[600px] grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1">
           {/* grid 1 */}
-          <div>
-            <BackgroundImage imgSrc={heroBgImageFour} alt="About page" />
-          </div>
-          {/* grid 2 */}
           <div className="flex flex-col items-center justify-center gap-6">
             <h2 className="text-3xl font-extrabold tracking-wide text-center md:text-4xl">
               Read more about Sheffield Hallam on out About page
@@ -147,6 +143,10 @@ const Home: NextPage = () => {
             <Link href="">
               <a className="button-86">About us</a>
             </Link>
+          </div>
+          {/* grid 2 */}
+          <div>
+            <BackgroundImage imgSrc={heroBgImageFour} alt="About page" />
           </div>
         </section>
       </Container>
