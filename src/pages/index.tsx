@@ -4,9 +4,10 @@ import Link from 'next/link'
 import { BackgroundImage } from '../components/Home/BackgroundImage'
 import { Container } from '../components/Home/Container'
 
-import heroBgImageOne from '../../public/images/hero-1-bg.png'
-import heroBgImageTwo from '../../public/images/hero-2-bg.png'
-import heroBgImageThree from '../../public/images/hero-3-bg.png'
+import heroBgImageOne from '../../public/images/hero-1-bg.svg'
+import heroBgImageTwo from '../../public/images/hero-2-bg.svg'
+import heroBgImageThree from '../../public/images/hero-3-bg.svg'
+import heroBgImageFour from '../../public/images/hero-4-bg.svg'
 import { Card } from '../components/Home/Card'
 const Home: NextPage = () => {
   return (
@@ -18,7 +19,7 @@ const Home: NextPage = () => {
       </Head>
       <Container>
         {/** ======= Hero 1 ========== */}
-        <section className="w-full xl:h-[600px] h-[800px]  grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1">
+        <section className="w-full xl:h-[600px] h-[800px] mt-4 grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1">
           {/** grid one */}
           <div className="flex flex-col items-center justify-center gap-4 font-mono xl:gap-7">
             <h2 className="text-4xl font-extrabold tracking-wide xl:text-5xl">
@@ -43,7 +44,7 @@ const Home: NextPage = () => {
         </section>
 
         {/** ======= course search ========== */}
-        <section className="h-[300px] flex flex-col gap-7 px-3 items-center justify-center">
+        <section className="h-[300px] flex flex-col gap-7 px-3 mt-4 items-center justify-center">
           <h2 className="text-3xl font-extrabold tracking-wide">
             Course Search
           </h2>
@@ -56,7 +57,7 @@ const Home: NextPage = () => {
 
         {/** ======= Hero 2 ========== */}
 
-        <section className="h-[600px] grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1 ">
+        <section className="h-[600px] mt-4  grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1 ">
           {/* Grid 1 */}
           <div>
             <BackgroundImage
@@ -84,7 +85,7 @@ const Home: NextPage = () => {
         </section>
 
         {/* ========= Cards 1 =========== */}
-        <section className="flex flex-col items-center justify-between gap-6 px-5 xl:flex-row xl:gap-0">
+        <section className="flex flex-col items-center justify-between gap-6 px-5 mt-4 xl:flex-row xl:gap-0">
           <Card
             body="Our city is scenic, creative and super friendly. You're going to love it"
             imgSrc="https://picsum.photos/200/300"
@@ -107,7 +108,7 @@ const Home: NextPage = () => {
 
         {/* ========= Hero 3 =========== */}
 
-        <section className="grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1 h-[600px] mt-3">
+        <section className="grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1 h-[600px] mt-4">
           {/* Grid one */}
           <div className="flex flex-col items-center justify-center gap-6 text-center">
             <h2 className="text-3xl font-extrabold tracking-wide md:text-4xl">
@@ -128,6 +129,24 @@ const Home: NextPage = () => {
               imgSrc={heroBgImageThree}
               alt="Research Scientist experimenting"
             />
+          </div>
+        </section>
+
+        {/* ========= Hero 4 About =========== */}
+
+        <section className="mt-3 h-[600px] grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1">
+          {/* grid 1 */}
+          <div>
+            <BackgroundImage imgSrc={heroBgImageFour} alt="About page" />
+          </div>
+          {/* grid 2 */}
+          <div className="flex flex-col items-center justify-center gap-6">
+            <h2 className="text-3xl font-extrabold tracking-wide text-center md:text-4xl">
+              Read more about Sheffield Hallam on out About page
+            </h2>
+            <Link href="">
+              <a className="button-86">About us</a>
+            </Link>
           </div>
         </section>
       </Container>

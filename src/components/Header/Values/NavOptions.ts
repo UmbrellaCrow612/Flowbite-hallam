@@ -9,6 +9,7 @@ export const NavOptions: {
     href: '',
     hasMoreOptions: true,
     moreOptions: [
+    // ============ Reminder dont add / to the url it has already been added to the link
       { title: 'Overview', href: '' },
       { title: 'Find a course', href: '' },
       { title: 'Accommodation', href: '' },
