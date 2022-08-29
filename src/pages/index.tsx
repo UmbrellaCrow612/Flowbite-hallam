@@ -88,21 +88,24 @@ const Home: NextPage = () => {
         <section className="flex flex-col items-center justify-between gap-6 px-5 mt-4 xl:flex-row xl:gap-0">
           <Card
             body="Our city is scenic, creative and super friendly. You're going to love it"
-            imgSrc="https://picsum.photos/200/300"
+            imgSrc="/images/applicant-1-bg.jpeg"
+            alt=""
             href=""
             title="Explore Sheffield"
           />
           <Card
             body="Award-winning teaching, world-class facilities and dedicated support"
-            imgSrc="https://picsum.photos/200/300"
+            imgSrc="/images/applicant-2-bg.jpeg"
             href=""
             title="Why choose us?"
+            alt=""
           />
           <Card
             body="We'll find you a place to live in your first year guaranteed!"
-            imgSrc="https://picsum.photos/200/300"
+            imgSrc="/images/applicant-3-bg.jpeg"
             href=""
             title="Accommodation"
+            alt=""
           />
         </section>
 
@@ -139,18 +142,21 @@ const Home: NextPage = () => {
             imgSrc="https://picsum.photos/200/300"
             href=""
             title="Explore Sheffield"
+            alt=""
           />
           <Card
             body="Award-winning teaching, world-class facilities and dedicated support"
             imgSrc="https://picsum.photos/200/300"
             href=""
             title="Why choose us?"
+            alt=""
           />
           <Card
             body="We'll find you a place to live in your first year guaranteed!"
             imgSrc="https://picsum.photos/200/300"
             href=""
             title="Accommodation"
+            alt=""
           />
         </section>
 

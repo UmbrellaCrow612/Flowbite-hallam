@@ -25,16 +25,23 @@ interface CardProps {
   href: string
   title: string
   body: string
+  alt: string
 }
 
-export const Card: React.FC<CardProps> = ({ imgSrc, href, title, body }) => {
+export const Card: React.FC<CardProps> = ({
+  imgSrc,
+  href,
+  title,
+  body,
+  alt,
+}) => {
   return (
     <Link href={`/${href}`}>
       <a className="w-full max-w-xs pb-10 bg-gray-300 border border-gray-200 shadow-md bg-opacity-20 rounded-xl">
         <article>
-          <div className="relative w-full px-1 h-[150px]">
+          <div className="relative w-full px-1 h-[200px]">
             <Image
-              alt="Mountains"
+              alt={alt}
               src={imgSrc}
               placeholder="blur"
               blurDataURL={`data:image/svg+xml;base64,${toBase64(
