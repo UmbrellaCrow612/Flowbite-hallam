@@ -170,8 +170,8 @@ const Home: NextPage = () => {
 
           {/* grid 2 */}
           <div className="flex flex-col items-center justify-center gap-6">
-            <h2 className="text-3xl font-extrabold tracking-wide text-center md:text-4xl">
-              Read more about Sheffield Hallam on out About page
+            <h2 className="text-2xl font-extrabold tracking-wide text-center md:text-3xl">
+              Read more about Sheffield Hallam on our about page
             </h2>
             <Link href="">
               <a className="button-86">About us</a>
