@@ -12,7 +12,7 @@ export const FooterLinks: React.FC<FooterLinksProps> = () => {
         >
           <h2 className="text-xl font-extrabold">{Option.title}</h2>
           {Option.subLinks.map((Option) => (
-            <Link href={`${Option.href}`} key={Option.title}>
+            <Link href={`/${Option.href}`} key={Option.title}>
               <a>{Option.title}</a>
             </Link>
           ))}

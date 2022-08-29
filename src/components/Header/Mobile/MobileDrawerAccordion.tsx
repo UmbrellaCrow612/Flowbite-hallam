@@ -4,14 +4,14 @@ import { MdExpandMore } from 'react-icons/md'
 
 interface MobileDrawerAccordionProps {
   title: string
-  href: string
+  _href: string
   hasMoreOptions: boolean
   moreOptions?: Array<{ title: string; href: string }>
 }
 
 export const MobileDrawerAccordion: React.FC<MobileDrawerAccordionProps> = ({
   title,
-  href,
+  _href,
   hasMoreOptions,
   moreOptions,
 }) => {
