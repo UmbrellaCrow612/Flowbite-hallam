@@ -30,7 +30,7 @@ interface CardProps {
 export const Card: React.FC<CardProps> = ({ imgSrc, href, title, body }) => {
   return (
     <Link href={`/${href}`}>
-      <a className="w-full max-w-xs pb-6 bg-gray-300 border border-gray-200 shadow-md bg-opacity-20 rounded-xl">
+      <a className="w-full max-w-xs pb-10 bg-gray-300 border border-gray-200 shadow-md bg-opacity-20 rounded-xl">
         <article>
           <div className="relative w-full px-1 h-[150px]">
             <Image
@@ -49,7 +49,7 @@ export const Card: React.FC<CardProps> = ({ imgSrc, href, title, body }) => {
           <h3 className="px-1 py-2 text-xl font-semibold tracking-wide text-center">
             {title}
           </h3>
-          <p className="p-1 text-sm font-thin text-center">{body}</p>
+          <p className="p-1 text-sm font-medium text-center">{body}</p>
         </article>
       </a>
     </Link>

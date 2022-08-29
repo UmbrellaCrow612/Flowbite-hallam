@@ -6,6 +6,7 @@ import { Container } from '../components/Home/Container'
 
 import heroBgImageOne from '../../public/images/hero-1-bg.png'
 import heroBgImageTwo from '../../public/images/hero-2-bg.png'
+import heroBgImageThree from '../../public/images/hero-3-bg.png'
 import { Card } from '../components/Home/Card'
 const Home: NextPage = () => {
   return (
@@ -26,7 +27,7 @@ const Home: NextPage = () => {
             <h3 className="text-xl font-bold tracking-wide xl:text-2xl">
               Find your place
             </h3>
-            <Link href="">
+            <Link href="/">
               <a className="button-86" role="button">
                 Find your place
               </a>
@@ -70,7 +71,7 @@ const Home: NextPage = () => {
               Join us on campus this autumn to check out our campus, facilities
               and support.
             </h3>
-            <Link href="">
+            <Link href="/">
               <a className="relative px-6 py-2 group">
                 <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
                 <span className="absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
@@ -102,6 +103,32 @@ const Home: NextPage = () => {
             href=""
             title="Accommodation"
           />
+        </section>
+
+        {/* ========= Hero 3 =========== */}
+
+        <section className="grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1 h-[600px] mt-3">
+          {/* Grid one */}
+          <div className="flex flex-col items-center justify-center gap-6 text-center">
+            <h2 className="text-3xl font-extrabold tracking-wide md:text-4xl">
+              Research at Hallam
+            </h2>
+            <h3 className="max-w-md text-2xl md:text-3xl md:max-w-none">
+              We bring knowledge to life with innovative, real-world research.
+            </h3>
+            <Link href="/">
+              <a className="button-86" role="button">
+                Findings
+              </a>
+            </Link>
+          </div>
+          {/* Grid Two */}
+          <div className="relative">
+            <BackgroundImage
+              imgSrc={heroBgImageThree}
+              alt="Research Scientist experimenting"
+            />
+          </div>
         </section>
       </Container>
     </>
