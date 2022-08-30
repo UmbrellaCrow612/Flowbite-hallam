@@ -58,7 +58,7 @@ const Home: NextPage = () => {
           <div className="p-5">
             <BackgroundImage
               imgSrc={heroBgImageOne}
-              alt="Women on a computer reading paper"
+              alt="Man on his phone with space behind him"
             />
           </div>
         </section>
@@ -82,7 +82,7 @@ const Home: NextPage = () => {
           <div className="p-5">
             <BackgroundImage
               imgSrc={heroBgImageTwo}
-              alt="Three people outside in a park"
+              alt="Rocket ship in the middle of the night"
             />
           </div>
           {/* Grid 2 */}
@@ -113,7 +113,7 @@ const Home: NextPage = () => {
             <Card
               body="Our city is scenic, creative and super friendly. You're going to love it"
               imgSrc="/images/applicant-1-bg.jpeg"
-              alt=""
+              alt="Two people sitting in a coffee shop"
               href=""
               title="Explore Sheffield"
             />
@@ -122,14 +122,14 @@ const Home: NextPage = () => {
               imgSrc="/images/applicant-2-bg.jpeg"
               href=""
               title="Why choose us?"
-              alt=""
+              alt="Person in the library"
             />
             <Card
               body="We'll find you a place to live in your first year guaranteed!"
               imgSrc="/images/applicant-3-bg.jpeg"
               href=""
               title="Accommodation"
-              alt=""
+              alt="People outside of there dorms"
             />
           </div>
         </section>
