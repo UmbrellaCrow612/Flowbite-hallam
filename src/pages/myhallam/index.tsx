@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Card } from '../../components/Card'
 import { CardContainer } from '../../components/CardContainer'
 import { Container } from '../../components/Container'
+import { AiOutlineArrowRight } from 'react-icons/ai'
 const Myhallam: NextPage = () => {
   return (
     <>
@@ -159,6 +160,25 @@ const Myhallam: NextPage = () => {
             />
           </CardContainer>
         </section>
+
+        {/* Helper Links */}
+
+        <section className="flex flex-col items-center justify-center gap-5 px-3 py-4 mt-4">
+          {LocalHelperLinks.map((Option) => (
+            <div className="flex flex-col items-center w-full gap-2" key={Option.title}>
+              <h2 className="text-2xl font-extrabold tracking-wide md:text-3xl">
+                {Option.title}
+              </h2>
+              <div className='flex flex-wrap gap-3 justify-evenly'>
+                {Option.subLinks.map((Option) => (
+                  <LocalButton href={`${Option.href}`} key={Option.title}>
+                    {Option.title}
+                  </LocalButton>
+                ))}
+              </div>
+            </div>
+          ))}
+        </section>
       </Container>
     </>
   )
@@ -176,41 +196,100 @@ const LocalButton: React.FC<Props> = ({ children, href }) => {
       <a className="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-indigo-600 transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-gray-50 group">
         <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-indigo-600 group-hover:h-full"></span>
         <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
-          <svg
-            className="w-5 h-5 text-green-400"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M14 5l7 7m0 0l-7 7m7-7H3"
-            ></path>
-          </svg>
+          <AiOutlineArrowRight className="w-5 h-5 text-green-400" />
         </span>
         <span className="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
-          <svg
-            className="w-5 h-5 text-green-400"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M14 5l7 7m0 0l-7 7m7-7H3"
-            ></path>
-          </svg>
+          <AiOutlineArrowRight className="w-5 h-5 text-green-400" />
         </span>
-        <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white">
+        <span className="relative w-full text-center transition-colors duration-200 ease-in-out group-hover:text-white">
           {children}
         </span>
       </a>
     </Link>
   )
 }
+
+const LocalHelperLinks: {
+  title: string
+  subLinks: Array<{ title: string; href: string }>
+}[] = [
+  {
+    title: 'Help in an emergency',
+    subLinks: [
+      {
+        title: 'Campus security',
+        href: '',
+      },
+      {
+        title: 'Report a serious incident',
+        href: '',
+      },
+      {
+        title: 'Urgent wellbeing support',
+        href: '',
+      },
+    ],
+  },
+  {
+    title: 'Popular queries',
+    subLinks: [
+      {
+        title: 'The Student Handbook',
+        href: '',
+      },
+      {
+        title: 'Covid-19 student guidance',
+        href: '',
+      },
+      {
+        title: 'Academic calendar',
+        href: '',
+      },
+      {
+        title: 'How your undergraduate degree is calculated',
+        href: '',
+      },
+      {
+        title: 'Understanding your results',
+        href: '',
+      },
+      {
+        title: 'Assessment and exam information',
+        href: '',
+      },
+      {
+        title: 'extension for submission deadline (RESD)',
+        href: '',
+      },
+      {
+        title: 'Industrial Action',
+        href: '',
+      },
+    ],
+  },
+  {
+    title: 'Student voice',
+    subLinks: [
+      {
+        title: 'Union Voice - Share Your Experience',
+        href: '',
+      },
+      {
+        title: 'Help improve your course with Student Reps',
+        href: '',
+      },
+      {
+        title: 'Help us improve your student experience',
+        href: '',
+      },
+      {
+        title: 'Book a Listening Room',
+        href: '',
+      },
+      {
+        title: 'Read our Hallam Insiders blogs',
+        href: '',
+      },
+    ],
+  },
+]
