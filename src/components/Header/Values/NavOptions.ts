@@ -128,7 +128,7 @@ export const NavOptions: {
   },
   {
     title: 'MyHallam',
-    href: '',
+    href: 'myhallam',
     hasMoreOptions: false,
   },
   {

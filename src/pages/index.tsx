@@ -2,13 +2,13 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 import { BackgroundImage } from '../components/Home/BackgroundImage'
-import { Container } from '../components/Home/Container'
+import { Container } from '../components/Container'
 
 import heroBgImageOne from '../../public/images/hero-1-bg.svg'
 import heroBgImageTwo from '../../public/images/hero-2-bg.svg'
 import heroBgImageThree from '../../public/images/hero-3-bg.svg'
 import heroBgImageFour from '../../public/images/hero-4-bg.svg'
-import { Card } from '../components/Home/Card'
+import { Card } from '../components/Card'
 const Home: NextPage = () => {
   return (
     <>

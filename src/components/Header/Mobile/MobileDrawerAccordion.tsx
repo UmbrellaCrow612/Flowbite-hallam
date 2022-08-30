@@ -1,6 +1,9 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { MdExpandMore } from 'react-icons/md'
+import { useRecoilState } from 'recoil'
+import { mobileDrawerState } from '../../../../atoms/mobileDrawerState'
 
 interface MobileDrawerAccordionProps {
   title: string
@@ -15,34 +18,53 @@ export const MobileDrawerAccordion: React.FC<MobileDrawerAccordionProps> = ({
   hasMoreOptions,
   moreOptions,
 }) => {
-  const [open, setOpen] = useState(false)
+  const Router = useRouter()
+  const [openAccordion, setOpenAccordion] = useState(false)
+  const [openMobileDrawer, setOpenMobileDrawer] =
+    useRecoilState(mobileDrawerState)
 
+  const changePage = (_href: string) => {
+    const destination = _href.toLocaleLowerCase()
+    Router.push(destination)
+    setOpenMobileDrawer(!openMobileDrawer)
+  }
   return (
     <>
-      {hasMoreOptions === true && (
+      {hasMoreOptions ? (
         <button
           className="flex items-center justify-between h-16 px-2 border-2 border-black rounded-md shadow-lg"
-          onClick={() => setOpen(!open)}
+          onClick={() => setOpenAccordion(!openAccordion)}
         >
-          <h2 className="text-base font-bold tracking-wide">{title}</h2>
+          <span className="text-base font-bold tracking-wide">{title}</span>
           <MdExpandMore
-            className={`text-3xl transition-all ${open ? 'rotate-180' : ''}`}
+            className={`text-3xl transition-all ${
+              openAccordion ? 'rotate-180' : ''
+            }`}
           />
+        </button>
+      ) : (
+        <button
+          className="flex items-center justify-between h-16 px-2 border-2 border-black rounded-md shadow-lg"
+          onClick={() => changePage(_href)}
+        >
+          <span className="text-base tracking-wide">{title}</span>
         </button>
       )}
 
-      {/** More options scroll down */}
-      <div className={`px-3 transition-all mt-1 ${open ? 'block' : 'hidden'} `}>
+      {/** More options for accordion  */}
+      <div
+        className={`px-3 transition-all mt-1 ${
+          openAccordion ? 'block' : 'hidden'
+        } `}
+      >
         {moreOptions?.map((Option) => (
-          <Link href={`/${Option.href}`} key={Option.title}>
-            <a
-              className="flex items-center justify-between h-16 px-2 mt-3 border-2 border-black rounded-md shadow-lg"
-              onClick={() => setOpen(!open)}
-              key={Option.title}
-            >
-              {Option.title}
-            </a>
-          </Link>
+          <button
+            className="flex items-center justify-between w-full h-16 px-2 mt-3 border-2 border-black rounded-md shadow-lg"
+            onClick={() => changePage(Option.href)}
+            key={Option.title}
+          >
+            {Option.title}
+          </button>
         ))}
       </div>
     </>
