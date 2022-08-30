@@ -25,8 +25,8 @@ export const MobileDrawerAccordion: React.FC<MobileDrawerAccordionProps> = ({
 
   const changePage = (_href: string) => {
     const destination = _href.toLocaleLowerCase()
-    Router.push(destination)
     setOpenMobileDrawer(!openMobileDrawer)
+    Router.push(destination)
   }
   return (
     <>
