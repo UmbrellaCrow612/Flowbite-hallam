@@ -4,3 +4,4 @@
 - Flowbite for section and component ideas
 - https://10015.io/ for cool things
 - [Button](https://devdojo.com/tailwindcss/buttons)
+- [Favicon generator and maker all](https://favicon.io/favicon-converter/)
