@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 import { Card } from '../../components/Card'
+import { CardContainer } from '../../components/CardContainer'
 import { Container } from '../../components/Container'
 const Myhallam: NextPage = () => {
   return (
@@ -134,7 +135,7 @@ const Myhallam: NextPage = () => {
           <h2 className="p-3 text-3xl font-extrabold tracking-wide text-center md:text-4xl">
             Teaching and learning
           </h2>
-          <div className="flex flex-wrap items-center w-full gap-4 p-1 justify-evenly">
+          <CardContainer>
             <Card
               title="Study skills"
               body="Access My Student Record, book a PC and get assessment support"
@@ -156,7 +157,7 @@ const Myhallam: NextPage = () => {
               imgSrc="/images/applicant-1-bg.jpeg"
               href=""
             />
-          </div>
+          </CardContainer>
         </section>
       </Container>
     </>

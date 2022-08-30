@@ -9,6 +9,7 @@ import heroBgImageTwo from '../../public/images/hero-2-bg.svg'
 import heroBgImageThree from '../../public/images/hero-3-bg.svg'
 import heroBgImageFour from '../../public/images/hero-4-bg.svg'
 import { Card } from '../components/Card'
+import { CardContainer } from '../components/CardContainer'
 const Home: NextPage = () => {
   return (
     <>
@@ -109,7 +110,7 @@ const Home: NextPage = () => {
           <h2 className="text-2xl font-extrabold tracking-wide text-center md:text-3xl">
             For applicants
           </h2>
-          <div className="flex flex-col items-center justify-between gap-6 px-5 mt-4 xl:flex-row xl:gap-0">
+          <CardContainer>
             <Card
               body="Our city is scenic, creative and super friendly. You're going to love it"
               imgSrc="/images/applicant-1-bg.jpeg"
@@ -131,7 +132,7 @@ const Home: NextPage = () => {
               title="Accommodation"
               alt="People outside of there dorms"
             />
-          </div>
+          </CardContainer>
         </section>
 
         {/* ========= Hero 3 =========== */}
@@ -165,7 +166,7 @@ const Home: NextPage = () => {
           <h2 className="text-2xl font-extrabold tracking-wide text-center md:text-3xl">
             News
           </h2>
-          <div className="flex flex-col items-center justify-between gap-6 px-5 mt-4 xl:flex-row xl:gap-0">
+          <CardContainer>
             <Card
               body="Our city is scenic, creative and super friendly. You're going to love it"
               imgSrc="/images/applicant-1-bg.jpeg"
@@ -187,7 +188,7 @@ const Home: NextPage = () => {
               title="Accommodation"
               alt=""
             />
-          </div>
+          </CardContainer>
         </section>
 
         {/* ========= Hero 4 About =========== */}
