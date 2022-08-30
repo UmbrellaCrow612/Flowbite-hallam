@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
+import { Card } from '../../components/Card'
 import { Container } from '../../components/Container'
 const Myhallam: NextPage = () => {
   return (
@@ -74,6 +75,87 @@ const Myhallam: NextPage = () => {
               right direction
             </p>
             <LocalButton href="">Hallam Help</LocalButton>
+          </div>
+        </section>
+
+        {/** ======= cards 1 ========= */}
+        <section className="px-3 py-4 mt-4">
+          <h2 className="p-3 text-3xl font-extrabold tracking-wide text-center md:text-4xl">
+            Discover university life
+          </h2>
+          <div className="flex flex-wrap items-center w-full gap-4 p-1 justify-evenly">
+            <Card
+              title="Explore your city"
+              body="Discover stunning green spaces and city hangouts"
+              alt=""
+              imgSrc="/images/applicant-1-bg.jpeg"
+              href=""
+            />
+            <Card
+              title="Our campuses"
+              body="Find out where to go and how to get there"
+              alt=""
+              imgSrc="/images/applicant-1-bg.jpeg"
+              href=""
+            />
+            <Card
+              title="Choose your squad"
+              body="Join a society, and meet people who love what you love"
+              alt=""
+              imgSrc="/images/applicant-1-bg.jpeg"
+              href=""
+            />
+            <Card
+              title="Students' Union"
+              body="Get academic support, volunteer and see social events"
+              alt=""
+              imgSrc="/images/applicant-1-bg.jpeg"
+              href=""
+            />
+            <Card
+              title="Sport and fitness"
+              body="Get active, join Team Hallam and make friends"
+              alt=""
+              imgSrc="/images/applicant-1-bg.jpeg"
+              href=""
+            />
+            <Card
+              title="Join the gym"
+              body="Sign up to Hallam Active and make use of our gyms"
+              alt=""
+              imgSrc="/images/applicant-1-bg.jpeg"
+              href=""
+            />
+          </div>
+        </section>
+
+        {/** ======= cards 2 ========= */}
+        <section className="px-3 py-4 mt-4">
+          <h2 className="p-3 text-3xl font-extrabold tracking-wide text-center md:text-4xl">
+            Teaching and learning
+          </h2>
+          <div className="flex flex-wrap items-center w-full gap-4 p-1 justify-evenly">
+            <Card
+              title="Study skills"
+              body="Access My Student Record, book a PC and get assessment support"
+              alt=""
+              imgSrc="/images/applicant-1-bg.jpeg"
+              href=""
+            />
+            <Card
+              title="IT and library"
+              body="Find study spaces, borrow books and equipment and print work"
+              alt=""
+              imgSrc="/images/applicant-1-bg.jpeg"
+              href=""
+            />
+            <Card
+              title="Access Blackboard"
+              body="Find course timetables, modules, academic updates, reading lists and more"
+              alt=""
+              imgSrc="/images/applicant-1-bg.jpeg"
+              href=""
+            />
           </div>
         </section>
       </Container>
